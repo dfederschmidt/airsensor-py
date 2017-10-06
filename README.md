@@ -1,5 +1,7 @@
 # airsensor-py
 
+[![PyPI version](https://badge.fury.io/py/airsensor-py.svg)](https://badge.fury.io/py/airsensor-py)
+
 Python package for getting sensor values from an Ambient Air Sensor such as offered by [Rehau](https://www.amazon.co.uk/Rehau-USB-Stick-Ambient-Sensor/dp/B00ZXP6EI4).
 
 ## Getting Started
@@ -45,7 +47,7 @@ $ airsensor-py
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the MIT License - see the [LICENSE.txt](LICENSE.txt) file for details
 
 ## Contribution
 
