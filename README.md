@@ -4,6 +4,15 @@
 
 Python package for getting sensor values from an Ambient Air Sensor such as offered by [Rehau](https://www.amazon.co.uk/Rehau-USB-Stick-Ambient-Sensor/dp/B00ZXP6EI4).
 
+## About VOC sensors
+
+VOC (**V**olatile **O**rganic **C**ompounds) potentially contribute to long-term health issues when exposed to them over a long time period [1].
+The sensor outputs numerical values typically in the 450-2000 range. According to the internet [2]:
+
+* **450-1000** Good air quality
+* **1000-1500** Medium air quality
+* **1500-** Bad air quality, consider opening a window for fresh air.
+
 ## Getting Started
 
 This section will introduce you to airsensor-py and how to install and use it for fun and profit.
@@ -14,9 +23,22 @@ Make sure that python 3 + pip is installed.
 
 ### Installing
 
+This package is published on pip from time to time.
+
 ```
 pip install airsensor-py
 ```
+
+To get the most recent version, clone this repository and install locally.
+
+```
+git clone https://github.com/dfederschmidt/airsensor-py
+cd airsensor-py
+pip install -r requirements.txt
+pip install -e .
+```
+
+
 
 ## Usage
 
@@ -56,3 +78,10 @@ Want to add a feature or report a bug? Open an issue or a pull request for me!
 ## Acknowledgments
 
 * [A C implementation](https://code.google.com/archive/p/airsensor-linux-usb/) was done by Rodric Yates which I used to see how the interaction with the device works.
+
+## References
+
+* [1] https://toxtown.nlm.nih.gov/text_version/chemicals.php?id=31
+* [2] http://nicht-traeumen-sondern-machen.de/RaspberryPi_Basteleien/Code_Luftqualitaet.php?anker=a7
+
+
