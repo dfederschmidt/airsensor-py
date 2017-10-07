@@ -1,11 +1,23 @@
 #!/usr/bin/env python
 from airsensor.core import AirSensor
+import click
+import json
+from datetime import datetime
 
-def main():
+@click.command()
+@click.option('--json', 'json_output', is_flag=True, help="Output result in JSON format.")
+def cli(json_output):
 
-    airsensor = AirSensor()
-    print(airsensor.get_voc())
+    sensor = AirSensor()
 
+    curr_value = sensor.get_voc()
+    curr_time = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+
+    if json_output:
+        output = {"timestamp": curr_time, "voc": curr_value}
+        print(json.dumps(output))
+    else:
+        print("{} - {}".format(curr_time, curr_value))
 
 if __name__ == '__main__':
-    main()
+    cli()
