@@ -63,6 +63,13 @@ $ airsensor-py
 > 450
 ```
 
+or
+
+```
+$ airsensor-py --json
+> {"timestamp": "2017-05-05 10:30:05", "voc": 450}
+```
+
 ## Built With
 
 * [PyUSB](https://walac.github.io/pyusb/)
