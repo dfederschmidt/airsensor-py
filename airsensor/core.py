@@ -23,6 +23,6 @@ class AirSensor(object):
         n = self.dev.write(0x02, cmd, timeout=10000)
 
         arr = self.dev.read(0x081, size_or_buffer=0x10, timeout=10000)
-        voc = int.from_bytes(arr.tostring()[2:4], byteorder="little")
+        voc = int.from_bytes(arr[2:4], byteorder="little")
 
         return voc
